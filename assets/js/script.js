@@ -132,3 +132,15 @@ function displayException(data) {
     document.getElementById("resultsModalTitle").innerText = heading;
     document.getElementById("results-content").innerHTML = body;
 }
+
+const toggleButton = document.getElementById("toggle-dark-mode");
+
+toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        toggleButton.textContent = "Toggle Light Mode";
+    } else {
+        toggleButton.textContent = "Toggle Dark Mode";
+    }
+});
